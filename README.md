@@ -1,6 +1,8 @@
 # Dissociating Spatial and Item-Based Attention
 Experiment, preprocessing, and analysis code for Ch 3 of my dissertation. "Cannonball" and "Discus" studies. Uses https://github.com/colinquirk/templateexperiments to build experiments. Includes realtime eyetracking rejection and synchronous EEG port codes.
 
+[OSF Repo with data here.](https://osf.io/p2rjx/)
+
 # Experiments
 
 ## Cannonball 
