@@ -1,0 +1,40 @@
+
+Running C01_33
+
+Condition 1:186
+Condition 2:203
+Condition 3:174
+Condition 4:98
+Condition 5:0
+
+Running C01_34
+
+Condition 1:218
+Condition 2:211
+Condition 3:235
+Condition 4:134
+Condition 5:0
+
+Running C01_35
+
+Condition 1:234
+Condition 2:204
+Condition 3:224
+Condition 4:154
+Condition 5:0
+
+Running C01_36
+
+Condition 1:206
+Condition 2:195
+Condition 3:223
+Condition 4:143
+Condition 5:0
+
+Running C01_37
+
+Condition 1:234
+Condition 2:243
+Condition 3:237
+Condition 4:166
+Condition 5:0

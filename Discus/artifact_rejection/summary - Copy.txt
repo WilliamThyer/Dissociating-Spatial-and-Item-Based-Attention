@@ -1,0 +1,285 @@
+
+
+Running 04/1
+
+pop_importeyetracker(): Loading ..\raw_data\d01\04\1\d01_04_1_eye.mat...
+pop_importeyetracker(): Synchronizing EEG and eye tracking data...
+
+-- 530143 EEG samples in synchronization range
+-- 642772 ET samples in synchronization range
+-- 500.00 Hz EEG sampling rate
+-- 606.23 Hz estimated ET sampling rate [*]
+   ([*] taking EEG as master clock & assuming the ET recording was never paused)
+-- Eye track will be downsampled to match the EEG sampling rate
+
+-- Note: the toolbox does not yet implement a low-pass filter to prevent aliasing.
+
+
+synchronize(): I detected 229 PAUSES in the eye-tracking recording!
+Pauses were defined as jumps in the ET time stamp > 3 samples
+The last data sample before and first sample after each pause
+will be set to zero to avoid interpolation artifacts during the pause!
+
+Shared events of same type less than +/- 4 samples apart: 985
+
+Synchronization quality:
+For all events in the EEG, an ET event of the same type was found within plusminus 4 samples.
+Synch. error is the latency difference between matching ET/EEG events after synchronization.
+It is distributed as follows:
+
+Error [smp]	Events
+-------------------------
+    -4     0
+    -3     0
+    -2     0
+    -1    17
+     0   827
+     1   141
+     2     0
+     3     0
+     4     0
+
+-------------------------
+Mean abs. sync. error (estimated from "shared" events): 0.321 ms
+-------------------------
+
+Event resorted by increasing latencies.
+
+Importing infos about other eyetracking messages into EEG.etc
+
+Synchronization completed.
+Setsize 1:48
+Setsize 2:46
+Setsize 3:50
+Setsize 4:0
+Setsize 5:0
+
+Percent Trials Rejected: 1.50
+
+Running 04/2
+
+pop_importeyetracker(): Loading ..\raw_data\d01\04\2\d01_04_2_eye.mat...
+pop_importeyetracker(): Synchronizing EEG and eye tracking data...
+
+-- 488223 EEG samples in synchronization range
+-- 623320 ET samples in synchronization range
+-- 500.00 Hz EEG sampling rate
+-- 638.36 Hz estimated ET sampling rate [*]
+   ([*] taking EEG as master clock & assuming the ET recording was never paused)
+-- Eye track will be downsampled to match the EEG sampling rate
+
+-- Note: the toolbox does not yet implement a low-pass filter to prevent aliasing.
+
+
+synchronize(): I detected 199 PAUSES in the eye-tracking recording!
+Pauses were defined as jumps in the ET time stamp > 3 samples
+The last data sample before and first sample after each pause
+will be set to zero to avoid interpolation artifacts during the pause!
+
+Shared events of same type less than +/- 4 samples apart: 994
+
+Synchronization quality:
+For all events in the EEG, an ET event of the same type was found within plusminus 4 samples.
+Synch. error is the latency difference between matching ET/EEG events after synchronization.
+It is distributed as follows:
+
+Error [smp]	Events
+-------------------------
+    -4     0
+    -3     0
+    -2     0
+    -1    19
+     0   867
+     1   108
+     2     0
+     3     0
+     4     0
+
+-------------------------
+Mean abs. sync. error (estimated from "shared" events): 0.256 ms
+-------------------------
+
+Event resorted by increasing latencies.
+
+Importing infos about other eyetracking messages into EEG.etc
+
+Synchronization completed.
+Setsize 1:50
+Setsize 2:47
+Setsize 3:46
+Setsize 4:0
+Setsize 5:0
+
+Percent Trials Rejected: 2.50
+
+Running 04/3
+
+pop_importeyetracker(): Loading ..\raw_data\d01\04\3\d01_04_3_eye.mat...
+pop_importeyetracker(): Synchronizing EEG and eye tracking data...
+
+-- 487060 EEG samples in synchronization range
+-- 623065 ET samples in synchronization range
+-- 500.00 Hz EEG sampling rate
+-- 639.62 Hz estimated ET sampling rate [*]
+   ([*] taking EEG as master clock & assuming the ET recording was never paused)
+-- Eye track will be downsampled to match the EEG sampling rate
+
+-- Note: the toolbox does not yet implement a low-pass filter to prevent aliasing.
+
+
+synchronize(): I detected 199 PAUSES in the eye-tracking recording!
+Pauses were defined as jumps in the ET time stamp > 3 samples
+The last data sample before and first sample after each pause
+will be set to zero to avoid interpolation artifacts during the pause!
+
+Shared events of same type less than +/- 4 samples apart: 978
+
+Synchronization quality:
+For all events in the EEG, an ET event of the same type was found within plusminus 4 samples.
+Synch. error is the latency difference between matching ET/EEG events after synchronization.
+It is distributed as follows:
+
+Error [smp]	Events
+-------------------------
+    -4     0
+    -3     0
+    -2     0
+    -1    34
+     0   840
+     1   104
+     2     0
+     3     0
+     4     0
+
+-------------------------
+Mean abs. sync. error (estimated from "shared" events): 0.282 ms
+-------------------------
+
+Event resorted by increasing latencies.
+
+Importing infos about other eyetracking messages into EEG.etc
+
+Synchronization completed.
+Setsize 1:47
+Setsize 2:46
+Setsize 3:49
+Setsize 4:0
+Setsize 5:0
+
+Percent Trials Rejected: 1.00
+
+Running 04/4
+
+pop_importeyetracker(): Loading ..\raw_data\d01\04\4\d01_04_4_eye.mat...
+pop_importeyetracker(): Synchronizing EEG and eye tracking data...
+
+-- 484953 EEG samples in synchronization range
+-- 576566 ET samples in synchronization range
+-- 500.00 Hz EEG sampling rate
+-- 594.46 Hz estimated ET sampling rate [*]
+   ([*] taking EEG as master clock & assuming the ET recording was never paused)
+-- Eye track will be downsampled to match the EEG sampling rate
+
+-- Note: the toolbox does not yet implement a low-pass filter to prevent aliasing.
+
+
+synchronize(): I detected 199 PAUSES in the eye-tracking recording!
+Pauses were defined as jumps in the ET time stamp > 3 samples
+The last data sample before and first sample after each pause
+will be set to zero to avoid interpolation artifacts during the pause!
+
+Shared events of same type less than +/- 4 samples apart: 15
+
+Synchronization quality:
+Warning: For 966 of 981 EEG events (98.5%), no ET event of same name was found within plusminus 4 samples
+This can occur, for example if some events were not transmitted to the ET (or EEG)
+If only a few events do not have a "partner" event, and sync quality for the remaining events is good, you are probably safe.
+Synch. error is the latency difference between matching ET/EEG events after synchronization.
+For the remaining 15 events, it is distributed as follows:
+
+Error [smp]	Events
+-------------------------
+    -4     0
+    -3     1
+    -2     3
+    -1     2
+     0     4
+     1     1
+     2     1
+     3     1
+     4     2
+
+-------------------------
+Mean abs. sync. error (estimated from "shared" events): 3.333 ms
+-------------------------
+
+Event resorted by increasing latencies.
+
+Importing infos about other eyetracking messages into EEG.etc
+
+Synchronization completed.
+Setsize 1:18
+Setsize 2:14
+Setsize 3:17
+Setsize 4:0
+Setsize 5:0
+
+Percent Trials Rejected: 67.90
+
+Running 04/5
+
+pop_importeyetracker(): Loading ..\raw_data\d01\04\5\d01_04_5_eye.mat...
+pop_importeyetracker(): Synchronizing EEG and eye tracking data...
+
+-- 633571 EEG samples in synchronization range
+-- 658847 ET samples in synchronization range
+-- 500.00 Hz EEG sampling rate
+-- 519.95 Hz estimated ET sampling rate [*]
+   ([*] taking EEG as master clock & assuming the ET recording was never paused)
+-- Eye track will be downsampled to match the EEG sampling rate
+
+-- Note: the toolbox does not yet implement a low-pass filter to prevent aliasing.
+
+
+synchronize(): I detected 199 PAUSES in the eye-tracking recording!
+Pauses were defined as jumps in the ET time stamp > 3 samples
+The last data sample before and first sample after each pause
+will be set to zero to avoid interpolation artifacts during the pause!
+
+Shared events of same type less than +/- 4 samples apart: 986
+
+Synchronization quality:
+For all events in the EEG, an ET event of the same type was found within plusminus 4 samples.
+Synch. error is the latency difference between matching ET/EEG events after synchronization.
+It is distributed as follows:
+
+Error [smp]	Events
+-------------------------
+    -4     0
+    -3     0
+    -2     0
+    -1    92
+     0   820
+     1    74
+     2     0
+     3     0
+     4     0
+
+-------------------------
+Mean abs. sync. error (estimated from "shared" events): 0.337 ms
+-------------------------
+
+Event resorted by increasing latencies.
+
+Importing infos about other eyetracking messages into EEG.etc
+
+Synchronization completed.
+Setsize 1:47
+Setsize 2:43
+Setsize 3:47
+Setsize 4:0
+Setsize 5:0
+
+Percent Trials Rejected: 5.20
+
+Running 04/6
