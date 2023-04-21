@@ -16,3 +16,4 @@ Discus/analysis/experiment
 *.pickle
 *.pdf
 *.png
+*/.vscode
