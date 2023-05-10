@@ -129,8 +129,14 @@ class Experiment:
         return artifact_idx
 
     def load_info(
-        self, isub, variable_names=["unique_id", "chan_labels", "chan_x", "chan_y", "chan_z", "sampling_rate", "times"]
-    ):
+        self, isub, 
+        variable_names=[
+            "unique_id", 
+            "chan_labels", 
+            "chan_x", "chan_y", "chan_z", 
+            "sampling_rate", "times"
+            ]
+        ):
         """
         loads info file that contains data about EEG file and subject
 
