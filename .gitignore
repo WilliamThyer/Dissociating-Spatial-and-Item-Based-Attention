@@ -1,15 +1,14 @@
 Cannonball/old
 Cannonball/raw_data
 Cannonball/analysis/data
-Cannonball/analysis/mord
-Cannonball/analysis/experiment
+Cannonball/analysis/models
+Cannonball/analysis/old
+Cannonball/artifact_rejection/*.txt
 
 Discus/old
 Discus/raw_data
 Discus/analysis/data
 Discus/analysis/old
-Discus/analysis/mord
-Discus/analysis/experiment
 Discus/artifact_rejection/*.txt
 
 *.pyc

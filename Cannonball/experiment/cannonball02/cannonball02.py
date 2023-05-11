@@ -13,7 +13,7 @@ https://github.com/colinquirk/templateexperiments and either put it in the same 
 code or give the path to psychopy in the preferences.
 
 Classes:
-Boomerang01 -- The class that runs the experiment.
+Cannonball01 -- The class that runs the experiment.
 """
 
 import os
