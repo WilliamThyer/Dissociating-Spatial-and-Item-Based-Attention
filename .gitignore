@@ -10,6 +10,7 @@ Discus/analysis/data
 Discus/analysis/old
 Discus/analysis/mord
 Discus/analysis/experiment
+Discus/artifact_rejection/*.txt
 
 *.pyc
 *.pkl
