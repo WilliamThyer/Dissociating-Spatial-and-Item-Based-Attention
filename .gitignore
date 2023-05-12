@@ -4,12 +4,14 @@ Cannonball/analysis/data
 Cannonball/analysis/models
 Cannonball/analysis/old
 Cannonball/artifact_rejection/*.txt
+Cannonball/artifact_rejection/old
 
 Discus/old
 Discus/raw_data
 Discus/analysis/data
 Discus/analysis/old
 Discus/artifact_rejection/*.txt
+Discus/artifact_rejection/old
 
 *.pyc
 *.pkl
@@ -17,3 +19,4 @@ Discus/artifact_rejection/*.txt
 *.pdf
 *.png
 */.vscode
+__pycache__
