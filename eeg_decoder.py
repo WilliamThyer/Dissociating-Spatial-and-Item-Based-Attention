@@ -9,6 +9,7 @@ import seaborn as sns
 import time
 from copy import deepcopy
 import scipy.stats as sista
+import pingouin
 
 from sklearn.model_selection import StratifiedShuffleSplit, train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -937,7 +938,7 @@ class Interpreter:
             self.acc = clfr.acc
             self.acc_shuff = clfr.acc_shuff
             self.conf_mat = clfr.conf_mat
-            self.confidence_scores = clfr.confidence_scores
+            self.confidence_scores = clfr.confidence_score
 
         import matplotlib
 
@@ -1451,6 +1452,7 @@ class Interpreter:
         subtitle="",
         stim_time=[0, 250],
         significance_testing_pair=[],
+        test_from_zero=False,
         sig_y=1,
         savefig=False,
         title=None,
@@ -1480,13 +1482,13 @@ class Interpreter:
             ax.plot(self.t, mean, self.colors[i], label=self.labels[i])
             ax.fill_between(self.t, upper, lower, color=self.colors[i], alpha=0.5)
 
-        leg = plt.legend(title=legend_title, loc=legend_pos, fontsize=13)
-        plt.setp(leg.get_title(), fontsize=13)
+        if legend_pos is not None:
+            leg = plt.legend(title=legend_title, loc=legend_pos, fontsize=13)
+            plt.setp(leg.get_title(), fontsize=13)
 
         # Significance Testing
         if len(significance_testing_pair) > 0:
             offset = 0
-            color = "orange"
 
             for score_i, score_ii in significance_testing_pair:
                 print(score_i)
@@ -1509,13 +1511,42 @@ class Interpreter:
                     np.ones(sum(sig05)) * (sig_y - offset),
                     marker="s",
                     s=33,
-                    c=color,
+                    c=self.colors[score_i],
                     label="p < .05",
                 )
                 sig_timepoints = self.t[self.t > 0][sig05]
                 print(f"Significant timepoints: {sig_timepoints}")
                 offset += 0.15
-                color = "orange"
+            
+        if test_from_zero:
+            offset=0
+            for icond,cond in enumerate(self.labels):
+                print(cond)
+                p = np.zeros(len(self.t[self.t > 0]))
+                # only test on timepoints after stimulus onset
+                for i, t in enumerate(np.arange(len(self.t))[self.t > 0]):
+                    # one-sided paired ttest
+                    p[i] = pingouin.ttest(
+                        np.mean(self.confidence_scores, 2)[:, t, icond],
+                        0,
+                    )['p-val']
+
+                # Use Benjamini-Hochberg procedure for multiple comparisons, defaults to FDR of .05
+                _, corrected_p, _, _ = multipletests(p, method="fdr_bh")
+                sig05 = corrected_p < 0.05
+
+                plt.scatter(
+                    self.t[self.t > 0][sig05] - 10,
+                    np.ones(sum(sig05)) * (sig_y - offset),
+                    marker="s",
+                    s=33,
+                    c=self.colors[icond],
+                    label="p < .05",
+                )
+                sig_timepoints = self.t[self.t > 0][sig05]
+                print(f"Significant timepoints: {sig_timepoints}")
+                offset += 0.15
+            
 
         # aesthetics
         ax.spines["right"].set_visible(False)
