@@ -1462,6 +1462,7 @@ class Interpreter:
         label_text_x=-105,
         label_text_ys=[-3.4, 2.8],
         stim_label_xy=[120, 3.5],
+        add_delay_labels=True,
         arrow_ys=[-1.1, 1.2],
     ):
         """
@@ -1483,8 +1484,12 @@ class Interpreter:
             ax.fill_between(self.t, upper, lower, color=self.colors[i], alpha=0.5)
 
         if legend_pos is not None:
-            leg = plt.legend(title=legend_title, loc=legend_pos, fontsize=13)
-            plt.setp(leg.get_title(), fontsize=13)
+            if legend_pos == 'outside':
+                leg = plt.legend(title=legend_title, fontsize=13,bbox_to_anchor=(1.3, 1.05))
+                plt.setp(leg.get_title(), fontsize=13)
+            else: 
+                leg = plt.legend(title=legend_title, loc=legend_pos, fontsize=13)
+                plt.setp(leg.get_title(), fontsize=13)
 
         # Significance Testing
         if len(significance_testing_pair) > 0:
@@ -1546,7 +1551,6 @@ class Interpreter:
                 sig_timepoints = self.t[self.t > 0][sig05]
                 print(f"Significant timepoints: {sig_timepoints}")
                 offset += 0.15
-            
 
         # aesthetics
         ax.spines["right"].set_visible(False)
@@ -1565,9 +1569,14 @@ class Interpreter:
         plt.ylabel("Distance from hyperplane (a.u.)", fontsize=14)
         plt.text(label_text_x, label_text_ys[0], f"Predicted\n{self.labels[0]}", fontsize=12, ha="center", va="top")
         plt.text(label_text_x, label_text_ys[1], f"Predicted\n{self.labels[-1]}", fontsize=12, ha="center", va="bottom")
-        # plt.text(stim_label_xy[0],stim_label_xy[1],'Stim',fontsize=14,ha='center',c='white')
         plt.arrow(label_text_x, arrow_ys[0], 0, -1, head_width=45, head_length=0.25, color="k", width=5)
         plt.arrow(label_text_x, arrow_ys[1], 0, 1, head_width=45, head_length=0.25, color="k", width=5)
+
+        if add_delay_labels:
+            ax.text(68,3,'Stim',c='white',fontsize=16)
+            ax.text(290,3,'1st half delay',color='k',fontsize=16,)
+            ax.text(660,3,'2nd half delay',color='k',fontsize=16)
+            ax.axvline(x=600, color='grey', alpha=.5,linestyle='-')
 
         plt.tight_layout()
         self.savefig("hyperplane" + subtitle, save=savefig)
