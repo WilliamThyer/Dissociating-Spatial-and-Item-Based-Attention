@@ -1461,6 +1461,7 @@ class Interpreter:
         legend_pos="lower right",
         label_text_x=-105,
         label_text_ys=[-3.4, 2.8],
+        arrow_labels=None,
         stim_label_xy=[120, 3.5],
         add_delay_labels=True,
         arrow_ys=[-1.1, 1.2],
@@ -1567,8 +1568,10 @@ class Interpreter:
         plt.title(title, fontsize=18)
         plt.xlabel("Time from stimulus onset (ms)", fontsize=14)
         plt.ylabel("Distance from hyperplane (a.u.)", fontsize=14)
-        plt.text(label_text_x, label_text_ys[0], f"Predicted\n{self.labels[0]}", fontsize=12, ha="center", va="top")
-        plt.text(label_text_x, label_text_ys[1], f"Predicted\n{self.labels[-1]}", fontsize=12, ha="center", va="bottom")
+        if arrow_labels is None: 
+            arrow_labels = [self.labels[0],self.labels[-1]]
+        plt.text(label_text_x, label_text_ys[0], f"Predicted\n{arrow_labels[0]}", fontsize=12, ha="center", va="top")
+        plt.text(label_text_x, label_text_ys[1], f"Predicted\n{arrow_labels[1]}", fontsize=12, ha="center", va="bottom")
         plt.arrow(label_text_x, arrow_ys[0], 0, -1, head_width=45, head_length=0.25, color="k", width=5)
         plt.arrow(label_text_x, arrow_ys[1], 0, 1, head_width=45, head_length=0.25, color="k", width=5)
 
