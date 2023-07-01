@@ -1576,9 +1576,9 @@ class Interpreter:
         plt.arrow(label_text_x, arrow_ys[1], 0, 1, head_width=45, head_length=0.25, color="k", width=5)
 
         if add_delay_labels:
-            ax.text(68,3,'Stim',c='white',fontsize=16)
-            ax.text(290,3,'1st half delay',color='k',fontsize=16,)
-            ax.text(660,3,'2nd half delay',color='k',fontsize=16)
+            ax.text(68,3.5,'Stim',c='white',fontsize=16)
+            ax.text(290,3.5,'1st half delay',color='k',fontsize=16,)
+            ax.text(660,3.5,'2nd half delay',color='k',fontsize=16)
             ax.axvline(x=600, color='grey', alpha=.5,linestyle='-')
 
         plt.tight_layout()
